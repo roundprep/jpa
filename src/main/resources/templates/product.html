@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+ <div class="flex justify-center p-8 max-w-7xl mx-auto">
+     <table class="table-auto">
+         <thead>
+         <tr class="bg-gray-100">
+             <th class="px-4 py-2">ID</th>
+             <th class="px-4 py-2">Product Name</th>
+             <th class="px-4 py-2"> Price</th>
+         </tr>
+         </thead>
+         <tbody>
+         <tr class="bg-white border-4 border-gray-200 px-4 py-2" th:each="product : ${products}">
+             <td class="px-4 py-2" th:text="${product.getId()}"></td>
+             <td class="px-4 py-2" th:text="${product.getName()}">Malcolm Lockyer</td>
+             <td class="px-4 py-2" th:text="${product.getPrice()}">1961</td>
+         </tr>
+         </tbody>
+     </table>
+ </div>
+</body>
+</html>
