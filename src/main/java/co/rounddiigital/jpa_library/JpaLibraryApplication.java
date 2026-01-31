@@ -8,10 +8,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.util.List;
 
 @SpringBootApplication
+@CrossOrigin(origins = "localhost:3000")
 public class JpaLibraryApplication {
     @Autowired
     private BookRepository bookRepository;
