@@ -3,14 +3,19 @@ package co.rounddiigital.jpa_library;
 import co.rounddiigital.jpa_library.exception.InvalidProductNameException;
 import co.rounddiigital.jpa_library.exception.InvalidProductPriceException;
 import co.rounddiigital.jpa_library.model.ErrorResponse;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestController;
+/***
+ * Centralized Error Handling
+ * Can we have more than one controller Advise - Yes
+ * @Configuration
+ */
 
 import java.time.Instant;
-
 @ControllerAdvice
 public class ProductErrorController {
 

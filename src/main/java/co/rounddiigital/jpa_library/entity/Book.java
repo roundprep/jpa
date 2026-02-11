@@ -1,6 +1,7 @@
 package co.rounddiigital.jpa_library.entity;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,7 +16,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
-    @OneToOne(cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL,  fetch = FetchType.EAGER)
     private Author author;
     private Double price;
     @Column(unique = true)
